@@ -1,7 +1,9 @@
 ﻿# Bootcamp-Personal
 
  📘 Day 1 – Java Basics for Automation (README.md)
+ --
 🎯 Goal for Day 1
+-
 
 Lay the foundation needed for automation by learning:
 
@@ -16,6 +18,7 @@ Basic console I/O
 Simple login logic using conditions
 
 🛠 What You Set Up
+-
 
 Installed & configured IntelliJ IDEA
 
@@ -24,7 +27,9 @@ Created your first Java project
 Wrote and ran your first Java class
 
 ✏️ Key Concepts Learned
+-
 ✅ 1. Java Program Structure
+-
 
 Every Java program starts with:
 
@@ -34,6 +39,7 @@ public static void main(String[] args) { }
 This is the entry point of execution.
 
 ✅ 2. Variables & Datatypes
+-
 
 Common types used in automation:
 
@@ -45,6 +51,7 @@ boolean	True/false values	true / false
 Automation uses these constantly: URLs, credentials, flags, counters, etc.
 
 ✅ 3. User Input (Scanner)
+-
 Scanner sc = new Scanner(System.in);
 String input = sc.nextLine();
 
@@ -52,6 +59,7 @@ String input = sc.nextLine();
 Useful for simulation/testing logic flow.
 
 ✅ 4. String Comparison
+-
 
 Very important:
 
@@ -68,6 +76,7 @@ equals() → compares values
 == → compares memory locations
 
 ✅ 5. Conditions & Nested Conditions
+-
 
 Basic condition:
 
@@ -89,7 +98,8 @@ if(user.equals("admin")) {
 
 Used heavily in automation to decide test flow.
 
-💻 Code Files You Wrote
+
+-
 1️⃣ Main.java
 
 Your first simple program:
@@ -163,4 +173,5 @@ Compare string values correctly
 Build simple automation-like logic
 
 Understand nested conditions
+
 
