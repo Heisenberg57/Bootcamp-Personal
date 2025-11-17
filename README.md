@@ -175,3 +175,215 @@ Build simple automation-like logic
 Understand nested conditions
 
 
+📘 Day 2 – Conditions, Multi-Conditions & Login Logic (README.md)
+-
+🎯 Goal for Day 2
+
+Strengthen your logic-building skills using:
+-
+
+if, else-if, else
+
+AND (&&) & OR (||) conditions
+
+Nested conditions
+
+Loops + conditions together
+
+Real-world login flows (password + OTP)
+
+3-attempt lockout logic (used in banking apps)
+
+These are core automation thinking patterns used everywhere in Selenium.
+
+🧠 Key Concepts Learned
+✅ 1. if / else-if / else
+-
+
+Used to create multiple decision paths.
+
+if(condition1) { }
+else if(condition2) { }
+else { }
+
+✅ 2. Multi-conditions (AND / OR)
+-
+AND (&&)
+→ All conditions must be true
+Example:
+
+if(user.equals("admin") && role.equals("manager"))
+
+
+OR (||)
+→ At least one condition must be true
+Example:
+
+if(age > 18 || hasPermission)
+
+✅ 3. Nested Conditions
+-
+
+A condition inside another.
+
+Automation use-case:
+Check password first, THEN verify OTP.
+
+if(passwordCorrect) {
+    if(otpCorrect) {
+        login success
+    }
+}
+
+✅ 4. Loop + Condition (3 Attempt Logic)
+-
+
+Used for:
+
+✔ OTP retries
+✔ Login attempts
+✔ Form validation loops
+✔ Polling retries in automation
+
+while(attempts > 0) {
+    // check value
+}
+
+💻 Programs You Wrote on Day 2
+1️⃣ AccessControl.java
+-
+
+Role-based access using else-if ladder.
+
+public class AccessControl {
+    public static void main(String[] args) {
+
+        String role = "manager";
+
+        if(role.equals("admin")) {
+            System.out.println("Full Access Granted");
+        }
+        else if(role.equals("manager")) {
+            System.out.println("Limited Access Granted");
+        }
+        else if(role.equals("guest")) {
+            System.out.println("View Only Access");
+        }
+        else {
+            System.out.println("Invalid Role");
+        }
+    }
+}
+
+2️⃣ LoginLimiter.java
+-
+
+3-attempt password system (real banking logic).
+
+import java.util.Scanner;
+
+public class LoginLimiter {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String correctPass = "12345";
+        int attempts = 3;
+
+        while(attempts > 0) {
+
+            System.out.print("Enter password: ");
+            String pass = sc.nextLine();
+
+            if(pass.equals(correctPass)) {
+                System.out.println("Login Successful!");
+                break;
+            } else {
+                attempts--;
+                System.out.println("Incorrect! Attempts left: " + attempts);
+            }
+        }
+
+        if(attempts == 0) {
+            System.out.println("Account Locked!");
+        }
+    }
+}
+
+3️⃣ MultiFactorLogin.java (Day 2 Final Deliverable)
+-
+Password + OTP + 3 attempts.
+
+import java.util.Scanner;
+
+public class MultiFactorLogin {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String correctPass = "12345";
+        int otp = 6789;
+
+        System.out.print("Enter password: ");
+        String inputPass = sc.nextLine();
+
+        if(inputPass.equals(correctPass)) {
+
+            System.out.println("Password correct! OTP sent to your phone.");
+
+            int attempts = 3;
+
+            while(attempts > 0) {
+
+                System.out.print("Enter OTP: ");
+                int inputOtp = sc.nextInt();
+
+                if(inputOtp == otp) {
+                    System.out.println("Login Successful! Welcome.");
+                    break;
+                } else {
+                    attempts--;
+                    System.out.println("Incorrect OTP. Attempts left: " + attempts);
+                }
+            }
+
+            if(attempts == 0) {
+                System.out.println("OTP failed. Login blocked.");
+            }
+
+        } else {
+            System.out.println("Password Incorrect. Login Failed.");
+        }
+
+    }
+}
+
+📚 Day 2 Revision Checklist
+-
+
+ I can use if, else-if, else
+
+ I understand && vs ||
+
+ I know when to use nested conditions
+
+ I can write a loop that controls attempts
+
+ I can build a multi-step login logic
+
+ I can think in automation-style flows (pre-check → validate → retry → final decision)
+
+🏆 Outcome of Day 2
+
+You now think like an automation engineer who can:
+
+✔ Validate fields
+✔ Control flow with conditions
+✔ Implement retry logic
+✔ Build multi-step checks like real banking logins
+✔ Combine loops + conditions
+
+This logic becomes crucial when we move to Selenium actions, waits, and framework building.
+
+
+
