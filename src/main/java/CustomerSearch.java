@@ -1,8 +1,8 @@
 public class CustomerSearch {
     public static void main(String[] args) {
-        int[] customerids = {102,202,303,404,505};
+        int[] customerids = {102,303,202,404,505};
 
-        int target =909;
+        int target =303;
         boolean found = false;
 
         for(int i =0; i<customerids.length;i++){
