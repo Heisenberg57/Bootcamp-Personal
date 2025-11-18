@@ -2,7 +2,7 @@ public class CustomerSearch {
     public static void main(String[] args) {
         int[] customerids = {102,202,303,404,505};
 
-        int target =303;
+        int target =909;
         boolean found = false;
 
         for(int i =0; i<customerids.length;i++){
