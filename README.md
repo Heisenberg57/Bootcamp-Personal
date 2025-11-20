@@ -373,17 +373,7 @@ public class MultiFactorLogin {
 
  I can think in automation-style flows (pre-check → validate → retry → final decision)
 
-🏆 Outcome of Day 2
-
-You now think like an automation engineer who can:
-
-✔ Validate fields
-✔ Control flow with conditions
-✔ Implement retry logic
-✔ Build multi-step checks like real banking logins
-✔ Combine loops + conditions
-
-This logic becomes crucial when we move to Selenium actions, waits, and framework building.
+Added for loops for checking specific conditions in the array like whether target is present in the array or not
 
 
 
