@@ -374,6 +374,7 @@ public class MultiFactorLogin {
  I can think in automation-style flows (pre-check → validate → retry → final decision)
 
 Added for loops for checking specific conditions in the array like whether target is present in the array or not
+using if else statements. 
 
 
 
