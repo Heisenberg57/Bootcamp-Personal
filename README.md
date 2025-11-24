@@ -373,17 +373,154 @@ public class MultiFactorLogin {
 
  I can think in automation-style flows (pre-check → validate → retry → final decision)
 
-🏆 Outcome of Day 2
+Added for loops for checking specific conditions in the array like whether target is present in the array or not
+using if else statements. 
 
-You now think like an automation engineer who can:
+📘 Day 3 – Loops, Arrays & Automation Logic 
+-
+🎯 Goal for Day 3
+-
 
-✔ Validate fields
-✔ Control flow with conditions
-✔ Implement retry logic
-✔ Build multi-step checks like real banking logins
-✔ Combine loops + conditions
+Master loops + arrays, which are essential for:
 
-This logic becomes crucial when we move to Selenium actions, waits, and framework building.
+scanning table rows
+
+looping through web elements
+
+validating lists
+
+handling multiple test data points
+
+retry logic in automation
+
+🧠 Key Concepts Learned
+-
+✅ 1. while Loop
+
+Runs as long as a condition is true.
+
+Automation use:
+
+retry an action
+
+polling for element presence
+
+timeout loops
+
+int count = 1;
+while(count <= 5) {
+    count++;
+}
+
+✅ 2. for Loop
+
+Runs a fixed number of times (range-based).
+
+Automation use:
+
+scanning table rows
+
+iterating dropdown options
+
+looping through test data
+
+for(int i = 1; i <= 5; i++) {
+}
+
+✅ 3. Arrays
+
+Used to store multiple values of the same type.
+
+Automation use:
+
+multiple test inputs
+
+customer IDs
+
+list of strings
+
+dropdown items
+
+int[] ids = {101, 202, 303};
+int size = ids.length; // 3
+
+✅ 4. Search Pattern (Loop + Condition)
+
+Find a target inside an array.
+
+Automation use:
+
+scan web table rows until match is found
+
+search for button/link text
+
+find user entry in paginated lists
+
+💻 Programs You Wrote on Day 3
+1️⃣ WhileDemo.java
+
+Retry-style loop.
+
+int count = 1;
+while(count <= 5) {
+    System.out.println("Retry attempt: " + count);
+    count++;
+}
+
+2️⃣ ForDemo.java
+
+Row-processing loop.
+
+for(int i = 1; i <= 5; i++) {
+    System.out.println("Processing row: " + i);
+}
+
+3️⃣ ArrayDemo.java
+
+Basic array iteration.
+
+int[] customerIds = {101, 102, 103, 104};
+
+for(int i = 0; i < customerIds.length; i++) {
+    System.out.println("Customer ID: " + customerIds[i]);
+}
+
+4️⃣ CustomerSearch.java
+
+Searches for a target ID.
+
+int target = 303;
+boolean found = false;
+
+for(int i = 0; i < customerIds.length; i++) {
+    if(customerIds[i] == target) {
+        System.out.println("Customer found at index: " + i);
+        found = true;
+        break;
+    }
+}
+
+5️⃣ CustomerStatusChecker.java (Day 3 Final Deliverable)
+int[] customerIds = {101, 205, 309, 412, 578};
+String[] statuses = {"Active", "Inactive", "KYC Pending", "Blocked", "Premium"};
+
+int target = 412;
+boolean found = false;
+
+for(int i = 0; i < customerIds.length; i++) {
+
+    if(customerIds[i] == target) {
+        System.out.println("Customer ID: " + customerIds[i]);
+        System.out.println("Status: " + statuses[i]);
+        found = true;
+        break;
+    }
+}
+
+if(!found) {
+    System.out.println("Customer not found in the system.");
+}
+
 
 
 
