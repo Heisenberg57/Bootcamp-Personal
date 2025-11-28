@@ -692,6 +692,118 @@ int index = CustomerUtils.getCustomerIndex(customers, 412);
 System.out.println("Found at index: " + index);
 
 
+Day 5 – Classes, Objects & Constructors (README.md)
+--
+🎯 Goal for Day 5
+-
+
+Master OOP fundamentals used directly in Selenium frameworks:
+
+Classes
+
+Objects
+
+Fields (class variables)
+
+Methods
+
+Constructors
+
+this keyword
+
+This is the foundation of Page Object Model (POM).
+
+🧠 Key Concepts Learned
+-
+✅ 1. Class
+-
+
+Blueprint/template.
+
+public class Car { }
+
+✅ 2. Object
+-
+
+Instance of a class.
+
+Car c1 = new Car();
+
+✅ 3. Fields (class variables)
+-
+String brand;
+int year;
+
+✅ 4. Methods
+-
+
+Behavior/Actions of the object.
+
+void start() { }
+
+✅ 5. Constructors
+-
+
+Special method that runs automatically when object is created.
+
+Used to initialize values.
+
+Student(String name, int age) {
+    this.name = name;
+    this.age = age;
+}
+
+✅ 6. this keyword
+-
+
+Refers to current object’s variables.
+
+this.name = name;
+
+💻 Programs From Day 5
+-
+1️⃣ Car.java / CarTest.java
+-
+
+Simple object creation + behavior.
+
+2️⃣ Student.java
+-
+
+Constructor usage.
+
+Student(String n, int a) {
+    this.name = n;
+    this.age = a;
+}
+
+3️⃣ BankAccount.java
+-
+
+OOP-based account simulation.
+
+Features:
+
+constructor
+
+deposit()
+
+withdraw()
+
+displayDetails()
+
+4️⃣ BankAccountTest.java
+-
+
+Interact with the BankAccount object.
+
+5️⃣ BankServices.java (Day 5 Final Deliverable)
+-
+
+OOP-based real banking simulation.
+
+
+
 
 
 
