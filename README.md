@@ -103,6 +103,7 @@ Used heavily in automation to decide test flow.
 1️⃣ Main.java
 
 Your first simple program:
+-
 
 public class Main {
     public static void main(String[] args) {
@@ -111,6 +112,8 @@ public class Main {
 }
 
 2️⃣ VariablesDemo.java
+-
+
 
 Practiced variables & printing:
 
@@ -130,6 +133,8 @@ public class VariablesDemo {
 }
 
 3️⃣ SmartLogin.java (Day 1 Deliverable)
+-
+
 import java.util.Scanner;
 
 public class SmartLogin {
@@ -623,16 +628,19 @@ Table rows
 💻 Programs You Wrote on Day 4
 -
 1️⃣ MethodDemo.java
+-
 static void greetUser() {
     System.out.println("Hello Automation Engineer!");
 }
 
 2️⃣ MethodParameters.java
+-
 static void greetUser(String name) {
     System.out.println("Hello " + name + ", welcome back!");
 }
 
 3️⃣ ReturnTypeDemo.java
+-
 static int addNumbers(int a, int b) {
     return a + b;
 }
@@ -642,12 +650,14 @@ static boolean isEligible(int age) {
 }
 
 4️⃣ ForEachDemo.java
+-
 int[] ids = {101, 202, 303};
 for(int id : ids) {
     System.out.println(id);
 }
 
 🏆 5️⃣ CustomerUtils.java (Day 4 Final Deliverable)
+-
 public class CustomerUtils {
 
     public static boolean customerExists(int[] ids, int target) {
@@ -672,6 +682,7 @@ public class CustomerUtils {
 }
 
 CustomerUtilsTest.java
+-
 int[] customers = {101, 205, 309, 412, 578};
 
 boolean exists = CustomerUtils.customerExists(customers, 309);
@@ -679,6 +690,7 @@ System.out.println("Exists? " + exists);
 
 int index = CustomerUtils.getCustomerIndex(customers, 412);
 System.out.println("Found at index: " + index);
+
 
 
 
