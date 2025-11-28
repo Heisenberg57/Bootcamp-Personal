@@ -522,5 +522,165 @@ if(!found) {
 }
 
 
+📘 Day 4 – Methods, Return Types & Utility Classes
+---------------
+
+🎯 Goal for Day 4
+-
+
+Learn to write reusable code, the core skill of automation engineers.
+
+Today you mastered:
+
+Methods
+
+Parameters
+
+Return types
+
+Static methods
+
+Enhanced for-loop
+
+Creating utility classes
+
+Writing reusable search logic
+
+These skills directly map to real Selenium frameworks.
+
+🧠 Key Concepts Learned
+✅ 1. Methods (Functions)
+--
+
+Used to group reusable logic.
+
+static void greetUser() { }
+
+
+Called with:
+
+greetUser();
+
+✅ 2. Methods with Parameters
+--
+
+PASS data into methods:
+
+static void greetUser(String name) { }
+greetUser("Suyog");
+
+✅ 3. Methods with Return Types
+-
+
+RETURN data out of methods:
+
+static int add(int a, int b) {
+    return a + b;
+}
+
+
+Example usage:
+
+int sum = add(10, 20);
+
+✅ 4. static Keyword
+-
+
+STATIC = no need to create an object.
+
+Perfect for:
+
+WaitUtils
+
+DriverFactory
+
+ConfigReader
+
+ExcelUtils
+
+APIHelpers
+
+Automation loves static because it's clean, simple, reusable.
+
+✅ 5. Enhanced For Loop (for-each)
+-
+
+Cleaner way to loop arrays/lists:
+
+for(int id : ids) {
+    System.out.println(id);
+}
+
+
+Used heavily when iterating:
+
+WebElements list
+
+Dropdown items
+
+Table rows
+
+💻 Programs You Wrote on Day 4
+-
+1️⃣ MethodDemo.java
+static void greetUser() {
+    System.out.println("Hello Automation Engineer!");
+}
+
+2️⃣ MethodParameters.java
+static void greetUser(String name) {
+    System.out.println("Hello " + name + ", welcome back!");
+}
+
+3️⃣ ReturnTypeDemo.java
+static int addNumbers(int a, int b) {
+    return a + b;
+}
+
+static boolean isEligible(int age) {
+    return age >= 18;
+}
+
+4️⃣ ForEachDemo.java
+int[] ids = {101, 202, 303};
+for(int id : ids) {
+    System.out.println(id);
+}
+
+🏆 5️⃣ CustomerUtils.java (Day 4 Final Deliverable)
+public class CustomerUtils {
+
+    public static boolean customerExists(int[] ids, int target) {
+
+        for(int id : ids) {
+            if(id == target) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int getCustomerIndex(int[] ids, int target) {
+
+        for(int i = 0; i < ids.length; i++) {
+            if(ids[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+
+CustomerUtilsTest.java
+int[] customers = {101, 205, 309, 412, 578};
+
+boolean exists = CustomerUtils.customerExists(customers, 309);
+System.out.println("Exists? " + exists);
+
+int index = CustomerUtils.getCustomerIndex(customers, 412);
+System.out.println("Found at index: " + index);
+
+
+
 
 
