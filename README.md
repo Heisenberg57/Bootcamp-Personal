@@ -103,6 +103,7 @@ Used heavily in automation to decide test flow.
 1️⃣ Main.java
 
 Your first simple program:
+-
 
 public class Main {
     public static void main(String[] args) {
@@ -111,6 +112,8 @@ public class Main {
 }
 
 2️⃣ VariablesDemo.java
+-
+
 
 Practiced variables & printing:
 
@@ -130,6 +133,8 @@ public class VariablesDemo {
 }
 
 3️⃣ SmartLogin.java (Day 1 Deliverable)
+-
+
 import java.util.Scanner;
 
 public class SmartLogin {
@@ -520,6 +525,285 @@ for(int i = 0; i < customerIds.length; i++) {
 if(!found) {
     System.out.println("Customer not found in the system.");
 }
+
+
+📘 Day 4 – Methods, Return Types & Utility Classes
+---------------
+
+🎯 Goal for Day 4
+-
+
+Learn to write reusable code, the core skill of automation engineers.
+
+Today you mastered:
+
+Methods
+
+Parameters
+
+Return types
+
+Static methods
+
+Enhanced for-loop
+
+Creating utility classes
+
+Writing reusable search logic
+
+These skills directly map to real Selenium frameworks.
+
+🧠 Key Concepts Learned
+✅ 1. Methods (Functions)
+--
+
+Used to group reusable logic.
+
+static void greetUser() { }
+
+
+Called with:
+
+greetUser();
+
+✅ 2. Methods with Parameters
+--
+
+PASS data into methods:
+
+static void greetUser(String name) { }
+greetUser("Suyog");
+
+✅ 3. Methods with Return Types
+-
+
+RETURN data out of methods:
+
+static int add(int a, int b) {
+    return a + b;
+}
+
+
+Example usage:
+
+int sum = add(10, 20);
+
+✅ 4. static Keyword
+-
+
+STATIC = no need to create an object.
+
+Perfect for:
+
+WaitUtils
+
+DriverFactory
+
+ConfigReader
+
+ExcelUtils
+
+APIHelpers
+
+Automation loves static because it's clean, simple, reusable.
+
+✅ 5. Enhanced For Loop (for-each)
+-
+
+Cleaner way to loop arrays/lists:
+
+for(int id : ids) {
+    System.out.println(id);
+}
+
+
+Used heavily when iterating:
+
+WebElements list
+
+Dropdown items
+
+Table rows
+
+💻 Programs You Wrote on Day 4
+-
+1️⃣ MethodDemo.java
+-
+static void greetUser() {
+    System.out.println("Hello Automation Engineer!");
+}
+
+2️⃣ MethodParameters.java
+-
+static void greetUser(String name) {
+    System.out.println("Hello " + name + ", welcome back!");
+}
+
+3️⃣ ReturnTypeDemo.java
+-
+static int addNumbers(int a, int b) {
+    return a + b;
+}
+
+static boolean isEligible(int age) {
+    return age >= 18;
+}
+
+4️⃣ ForEachDemo.java
+-
+int[] ids = {101, 202, 303};
+for(int id : ids) {
+    System.out.println(id);
+}
+
+🏆 5️⃣ CustomerUtils.java (Day 4 Final Deliverable)
+-
+public class CustomerUtils {
+
+    public static boolean customerExists(int[] ids, int target) {
+
+        for(int id : ids) {
+            if(id == target) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int getCustomerIndex(int[] ids, int target) {
+
+        for(int i = 0; i < ids.length; i++) {
+            if(ids[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+
+CustomerUtilsTest.java
+-
+int[] customers = {101, 205, 309, 412, 578};
+
+boolean exists = CustomerUtils.customerExists(customers, 309);
+System.out.println("Exists? " + exists);
+
+int index = CustomerUtils.getCustomerIndex(customers, 412);
+System.out.println("Found at index: " + index);
+
+
+Day 5 – Classes, Objects & Constructors (README.md)
+--
+🎯 Goal for Day 5
+-
+
+Master OOP fundamentals used directly in Selenium frameworks:
+
+Classes
+
+Objects
+
+Fields (class variables)
+
+Methods
+
+Constructors
+
+this keyword
+
+This is the foundation of Page Object Model (POM).
+
+🧠 Key Concepts Learned
+-
+✅ 1. Class
+-
+
+Blueprint/template.
+
+public class Car { }
+
+✅ 2. Object
+-
+
+Instance of a class.
+
+Car c1 = new Car();
+
+✅ 3. Fields (class variables)
+-
+String brand;
+int year;
+
+✅ 4. Methods
+-
+
+Behavior/Actions of the object.
+
+void start() { }
+
+✅ 5. Constructors
+-
+
+Special method that runs automatically when object is created.
+
+Used to initialize values.
+
+Student(String name, int age) {
+    this.name = name;
+    this.age = age;
+}
+
+✅ 6. this keyword
+-
+
+Refers to current object’s variables.
+
+this.name = name;
+
+💻 Programs From Day 5
+-
+1️⃣ Car.java / CarTest.java
+-
+
+Simple object creation + behavior.
+
+2️⃣ Student.java
+-
+
+Constructor usage.
+
+Student(String n, int a) {
+    this.name = n;
+    this.age = a;
+}
+
+3️⃣ BankAccount.java
+-
+
+OOP-based account simulation.
+
+Features:
+
+constructor
+
+deposit()
+
+withdraw()
+
+displayDetails()
+
+4️⃣ BankAccountTest.java
+-
+
+Interact with the BankAccount object.
+
+5️⃣ BankServices.java (Day 5 Final Deliverable)
+-
+
+OOP-based real banking simulation.
+
+
+
 
 
 
