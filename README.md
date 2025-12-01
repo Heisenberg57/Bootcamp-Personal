@@ -805,7 +805,9 @@ OOP-based real banking simulation.
 
 
 📘 Day 6 – Inheritance, Overriding & Polymorphism (README.md)
+-
 🎯 Goal for Day 6
+-
 
 Understand the OOP pillars that power every Selenium automation framework:
 
@@ -830,8 +832,10 @@ all work internally.
 
 🧠 Key Concepts Learned
 ✅ 1. Inheritance
+=
 
 Child class gets all variables & methods of parent class.
+-
 
 Example:
 class Person {
@@ -852,6 +856,7 @@ Test classes inherit BaseTest
 Common methods reused without duplication
 
 ✅ 2. Method Overriding
+-
 
 Child REWRITES the parent method
 (SAME name, SAME parameters)
@@ -874,6 +879,7 @@ WebDriver driver = new ChromeDriver();  // Chrome version runs
 driver.get("url");
 
 ✅ 3. super keyword
+-
 super()
 
 Calls parent constructor.
@@ -895,6 +901,7 @@ class Child extends Parent {
 }
 
 ✅ 4. Polymorphism (MOST IMPORTANT)
+-
 Definition:
 
 Parent reference can hold child objects.
@@ -915,6 +922,7 @@ This is the core magic of Selenium.
 
 💻 Programs You Built on Day 6
 1️⃣ Person → Employee (Inheritance Basics)
+-
 class Person {
     String name;
     int age;
@@ -930,6 +938,7 @@ class Employee extends Person {
 }
 
 2️⃣ Account → SavingsAccount (Overriding)
+-
 class Account {
     void withdraw(double amount) {
         System.out.println("Generic withdraw");
@@ -944,6 +953,7 @@ class SavingsAccount extends Account {
 }
 
 3️⃣ super() Example
+-
 class User {
     User() { System.out.println("User constructor"); }
 }
@@ -956,6 +966,7 @@ class Admin extends User {
 }
 
 4️⃣ Banking System Polymorphism (Final Deliverable)
+-
 Account acc;
 
 acc = new SavingsAccount("Suyog", 101, 8000);
@@ -963,6 +974,7 @@ acc.withdraw(3000);   // runs SavingsAccount version
 
 acc = new CurrentAccount("Valentina", 202, 5000);
 acc.withdraw(9000);   // runs CurrentAccount version
+
 
 
 
