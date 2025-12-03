@@ -15,5 +15,9 @@ public class ArrayListOperations {
 
         customers.set(1,"Valentina");
         System.out.println("Updated list: " + customers);
+
+        // remove value
+        customers.remove("Suyog");
+        System.out.println("After removal: " + customers);
     }
 }
