@@ -5,12 +5,15 @@ public class ArrayListOperations {
         ArrayList<String> customers = new ArrayList<>();
 
         customers.add("Suyog");
-        customers.add("Valentina");
+        customers.add("Priya");
         customers.add("Radha");
         customers.add("Nikhila");
 
         System.out.println("All Customers"+customers);
 
         System.out.println("Customer at index 1: " + customers.get(1));
+
+        customers.set(1,"Valentina");
+        System.out.println("Updated list: " + customers);
     }
 }
