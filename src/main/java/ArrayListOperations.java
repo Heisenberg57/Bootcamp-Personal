@@ -19,5 +19,7 @@ public class ArrayListOperations {
         // remove value
         customers.remove("Suyog");
         System.out.println("After removal: " + customers);
+
+        System.out.println("Total customers: " + customers.size());
     }
 }
