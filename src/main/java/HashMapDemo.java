@@ -12,5 +12,15 @@ public class HashMapDemo {
 
         System.out.println(customers.get(202));
 
+        customers.remove(303);
+
+        System.out.println(customers);
+
+        System.out.println(customers.containsKey(101));
+
+        for(Integer id : customers.keySet()){
+            System.out.println(id + " -> "+customers.get(id));
+        }
+
     }
 }
