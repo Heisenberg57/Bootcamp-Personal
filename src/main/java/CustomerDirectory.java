@@ -13,5 +13,7 @@ public class CustomerDirectory {
         System.out.println("=== Customer Directory ===");
         System.out.println(customers);
 
+        System.out.println("Customer 202: "+customers.get(202));
+
     }
 }
