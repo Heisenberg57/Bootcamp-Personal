@@ -9,5 +9,8 @@ public class HashMapDemo {
         customers.put(303,"Radha");
 
         System.out.println(customers);
+
+        System.out.println(customers.get(202));
+
     }
 }
