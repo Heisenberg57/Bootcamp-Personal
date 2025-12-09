@@ -9,6 +9,8 @@ public class TestRunner {
 		//Set Fields
 		tc1.testName = "Login Test";
 		tc1.testDescription = "Verify user can login with valid credentials";
+		tc1.steps = 3;
+		tc1.expectedResultMatch=false;
 		
 		tc1.run();
 
