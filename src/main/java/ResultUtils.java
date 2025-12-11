@@ -12,6 +12,10 @@ public class ResultUtils {
 		}
 	}
 
+	public static int getTotalmarks(int writtenMarks, int oralMarks ) {
+		return writtenMarks+oralMarks;
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -23,6 +27,9 @@ public class ResultUtils {
 		
 		System.out.println("Student 1: " + result1);
         System.out.println("Student 2: " + result2);
+
+		int totalMarks = getTotalmarks(70,18);
+		System.out.println(totalMarks);
 		
 		
 		
