@@ -1,6 +1,6 @@
 
 
-public class TestCase {
+public class TestCaseFinal {
     private static int counter = 1;
 
     private String testId;
@@ -11,7 +11,7 @@ public class TestCase {
     private String status;
 
 
-    public TestCase(String testName, String testDescription, int steps, boolean expectedResultMatch) {
+    public TestCaseFinal(String testName, String testDescription, int steps, boolean expectedResultMatch) {
         this.testName=testName;
         this.testDescription=testDescription;
         this.steps=steps;

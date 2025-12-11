@@ -4,21 +4,21 @@ import java.util.List;
 class TestRunnerFinal {
     public static void main(String[] args) {
         // Create multiple test cases
-        TestCase tc1 = new TestCase(
+        TestCaseFinal tc1 = new TestCaseFinal(
                 "Login Test",
                 "Verify user can login with valid credentials",
                 3,
                 true
         );
 
-        TestCase tc2 = new TestCase(
+        TestCaseFinal tc2 = new TestCaseFinal(
                 "Logout Test",
                 "Verify user can logout successfully",
                 2,
                 false
         );
 
-        TestCase tc3 = new TestCase(
+        TestCaseFinal tc3 = new TestCaseFinal(
                 "Add To Cart Test",
                 "Verify product can be added to cart",
                 4,
@@ -26,7 +26,7 @@ class TestRunnerFinal {
         );
 
         // Store them in a list
-        List<TestCase> tests = new ArrayList<>();
+        List<TestCaseFinal> tests = new ArrayList<>();
         tests.add(tc1);
         tests.add(tc2);
         tests.add(tc3);
@@ -37,7 +37,7 @@ class TestRunnerFinal {
 
         System.out.println("======= EXECUTING ALL TEST CASES =======");
 
-        for (TestCase test : tests) {
+        for (TestCaseFinal test : tests) {
 
             test.run();  // run individual test
 
