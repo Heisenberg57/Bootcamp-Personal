@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestRunner {
+class TestRunnerFinal {
     public static void main(String[] args) {
         // Create multiple test cases
         TestCase tc1 = new TestCase(
