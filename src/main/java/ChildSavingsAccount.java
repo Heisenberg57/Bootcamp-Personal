@@ -14,6 +14,11 @@ public class ChildSavingsAccount extends ParentAccount {
         balance += interest;
         System.out.println("Interest applied: " + interest);
     }
+
+	public void deposit(double amount) {
+        System.out.println("Depositing into Savings Account...");
+        super.deposit(amount);   // call parent logic
+    }
     
     
 
