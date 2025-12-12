@@ -13,4 +13,10 @@ public class ChildCurrentAccount extends ParentAccount{
         System.out.println("Overdraft Limit: " + overdraftLimit);
     }
 
+	@Override
+	public void deposit(double amount) {
+	    System.out.println("Depositing into Current Account with overdraft rules...");
+	    super.deposit(amount);
+	}
+
 }
