@@ -978,11 +978,14 @@ acc.withdraw(9000);   // runs CurrentAccount version
 
 Interface in java:
 
+A Java interface is a blueprint of a class that defines a contract for behavior which implementing classes must follow. It specifies what a class should do, but not how it should do it, and is used to achieve abstraction and simulate multiple inheritance. 
+
 public interface Browser {
 
     void launch();
     void close();
 }
+
 
 
 
