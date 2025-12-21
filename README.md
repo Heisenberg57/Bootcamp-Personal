@@ -976,6 +976,17 @@ acc = new CurrentAccount("Valentina", 202, 5000);
 acc.withdraw(9000);   // runs CurrentAccount version
 
 
+Interface in java:
+
+public interface Browser {
+
+    void launch();
+    void close();
+}
+
+
+
+
 
 
 
