@@ -3,7 +3,7 @@ import java.util.Set;
 
 public class SetExample {
     public static void main(String[] args) {
-
+        // Set: use when uniqueness matters (e.g. browsers)
         Set<String> browsers = new HashSet<>();
 
         browsers.add("Chrome");

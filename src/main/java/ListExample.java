@@ -2,9 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListExample {
+
     public static void main(String[] args) {
 
         List<String> testNames = new ArrayList<>();
+        // List: use when order matters (e.g. test steps, elements)
 
         testNames.add("Login Test");
         testNames.add("Logout Test");
