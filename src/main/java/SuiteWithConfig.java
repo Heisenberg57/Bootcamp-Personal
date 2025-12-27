@@ -11,6 +11,7 @@ public class SuiteWithConfig {
         List<SimpleTest> tests = new ArrayList<>();
         tests.add(new SimpleTest("Login Test", true));
         tests.add(new SimpleTest("Checkout Test", true));
+        tests.add(new SimpleTest("Add to Basket Test",false));
 
         System.out.println("Running tests on environment: " + config.get("env"));
 
