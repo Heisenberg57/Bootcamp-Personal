@@ -16,7 +16,12 @@ public class SuiteWithConfig {
         System.out.println("Running tests on environment: " + config.get("env"));
 
         for (SimpleTest test : tests) {
-            test.run();
+            try{test.run();
+            } catch (Exception e) {
+                System.out.println("X Test Crashed: "+test.name);
+                System.out.println("Reason: " + e.getMessage());
+            }
+
         }
 
     }
